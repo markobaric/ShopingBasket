@@ -30,7 +30,9 @@ namespace ShoppingBasket.Offers
                     totalButterCount >= MIN_NUMBER_OF_ITEMS_TO_EARN_DISCOUNT &&
                     numberOfFreeBreadsGiven < MAX_NUMBER_OF_DISCOUNTS)
                 {
+                    // Update the price of shopping basket item
                     item.UpdateItemPrice(DISCOUNT_MULTIPLICATOR, MAX_NUMBER_OF_DISCOUNTS - numberOfFreeBreadsGiven);
+                    
                     numberOfFreeBreadsGiven++;
                 }
             }

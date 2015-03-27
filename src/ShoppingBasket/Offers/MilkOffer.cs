@@ -36,7 +36,9 @@ namespace ShoppingBasket.Offers
                     if (numberOfFreeMilksToGiveInThisItem == 0)
                         numberOfFreeMilksToGiveInThisItem = 1;
 
+                    // Update the price of shopping basket item
                     item.UpdateItemPrice(DISCOUNT_MULTIPLICATOR, numberOfFreeMilksToGiveInThisItem);
+                    
                     numberOfFreeMilksGiven += numberOfFreeMilksToGiveInThisItem;
                 }
             }

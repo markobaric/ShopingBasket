@@ -32,6 +32,22 @@ namespace ShoppingBasket.Tests
         }
 
         [TestMethod]
+        public void OneBreadOneButterOneMilkNoOffers()
+        {
+            // Arrange
+            IShoppingBasket basket = new ShoppingBasket();
+            basket.AddItem(new ShoppingBasketItem(new Bread(), 1));
+            basket.AddItem(new ShoppingBasketItem(new Butter(), 1));
+            basket.AddItem(new ShoppingBasketItem(new Milk(), 1));
+
+            // Act
+            decimal total = basket.GetTotal();
+
+            // Assert
+            Assert.AreEqual(2.95m, total);
+        }
+
+        [TestMethod]
         public void TwoButtersTwoBreads()
         {
             // Arrange
